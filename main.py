@@ -20,5 +20,9 @@ else:
     if len(result[0]["externalAuths"].items()) == 0:
         print("No external auths found")
     else:
+        displayName = result[0]["displayName"]
+        accountId = result[0]["id"]
+        print(f"Information for {displayName}")
+        print(f"Account ID: {accountId}")
         for key, value in result[0]["externalAuths"].items():
             print(ExternalAuth(key, value).to_string())

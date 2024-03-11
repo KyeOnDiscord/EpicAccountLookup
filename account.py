@@ -9,9 +9,9 @@ class ExternalAuth:  # pylint: disable=too-few-public-methods
 
     def __init__(self, key, value):
         self.service_name = key
-        self.display_name = None
-        self.external_auth_id = None
-        self.profile_url = None
+        self.display_name = "None"
+        self.external_auth_id = "None"
+        self.profile_url = "None"
         if key in ["xbl", "psn", "steam"]:
             if value.get("externalDisplayName") is not None:
                 self.display_name = value["externalDisplayName"]
